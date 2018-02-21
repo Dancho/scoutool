@@ -9,8 +9,5 @@
 
 ## Setup
 
-to run `sbt` on any machine without installing it just build a docker container and run it with docker
-
-    docker build -t sbt -f dockerfiles/sbt/Dockerfile dockerfiles/sbt/
-    docker run --rm -it -v $PWD:/app -v $PWD/sbt-cache:/root sbt
+To set up the for development follow the instructions in the [README.dev.md](README.dev.md) file
 

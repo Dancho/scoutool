@@ -1,4 +1,4 @@
-FROM java:9-jre
+FROM java:8-jre
 
 MAINTAINER Daniel Sturm <mail@danielsturm.de>
 
@@ -14,10 +14,9 @@ RUN set -x \
  && apt-get update \
  && apt-get install -y \
     sbt \
- && ln -s /usr/lib/jvm/java-9-openjdk-amd64/lib /usr/lib/jvm/java-9-openjdk-amd64/conf \
  && sbt sbtVersion
 
-VOLUME ["/app"]
+VOLUME ["/root", "/app"]
 WORKDIR /app
 
 ENTRYPOINT ["sbt"]

@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  scoutool:
+    build: dockerfiles/development
+    ports:
+      - 9000:9000
+    stdin_open: true
+    volumes:
+      - ./scoutool:/sbt
+      - ~:/cache
+    user: ${UID}:${GID}
